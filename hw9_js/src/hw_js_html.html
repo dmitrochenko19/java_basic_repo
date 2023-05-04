@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Форма</title>
+    <link rel = "stylesheet" href = "hw_css.css"/>
+</head>
+<body>
+<script src = "js_file.js"></script>
+<h3>Форма добавления информации о студенте</h3>
+<form class="border_block">
+    <p>
+        <label for="name" >Имя студента: </label>
+        <input type="text" id="name" style="margin-left: 85px">
+    </p>
+    <p>
+        <label for="date">Дата рождения: </label>
+        <input type="date" id="date" style="margin-left: 75px">
+    </p>
+    <p>
+        <label for="sex">Пол:</label>
+        <select id="sex" style="margin-left: 150px">
+            <option>мужчина</option>
+            <option>женщина</option>
+        </select>
+    </p>
+    <p>
+        <button type="button" onclick="addStudent(); clear()">Добавить</button>
+    </p>
+</form>
+<h3>Таблица студентов</h3>
+<table id = "studentTable">
+    <tbody id = "tbody">
+    <tr>
+        <td>Имя студента</td><td>Пол</td><td>Дата рождения</td><td>Возраст</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <td colspan="4" class="blank_row"></td>
+    </tr>
+    <tr id = "medium_age">
+        <td colspan="3">Средний возраст студентов: </td><td id = "result_age"></td>
+    </tr>
+    </tfoot>
+</table>
+
+</body>
+</html>
+
